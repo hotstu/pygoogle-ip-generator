@@ -100,7 +100,7 @@ class GoHandler:
 def do_work():
     while True:
         ip = q.get()
-        g = GoHandler((ip, 443), timeout=6, domain_filter="android.com", result_queue=result)
+        g = GoHandler((ip, 443), timeout=6, domain_filter=None, result_queue=result)
         try:
             g.do()
         except:
