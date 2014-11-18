@@ -66,13 +66,17 @@ class GoHandler:
             socket.setdefaulttimeout(self.timeout)
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         context = ssl.create_default_context()
-        if self.domain_filter == None:
-            context.check_hostname = False
-        ssl_sock = context.wrap_socket(sock, server_hostname=self.domain_filter)
+        context.check_hostname = False
+        #if check_hostname = ture, server_hostname can't be none
+        ssl_sock = context.wrap_socket(sock)
         try:
             start_time = time.time()
             ssl_sock.connect(self.address)
+            cert = ssl_sock.getpeercert(binary_form=False)
+            ssl_sock.close()
             end_time = time.time()
+            if self.domain_filter != None:
+                self._check_name(cert, self.domain_filter)
             time_cost = '{:.6f}'.format(end_time - start_time)
             print("{1}:connect to {0} Success!!".format(self.address[0], time_cost))
             if self.result_queue:
@@ -87,10 +91,16 @@ class GoHandler:
             print("{2}:connect to {1} timeout err: timeout in {0} seconds"
                   .format(self.timeout, self.address[0], time.strftime(DATE_FORMAT,time.localtime())))
             
+    def _check_name(self, cert, domain):
+        subject_altname = cert.get('subjectAltName',{})
+        domains = ";".join([i[1] for i in subject_altname if i[0] == "DNS"])
+        if domain not in domains:
+            raise ssl.CertificateError("not match domain %s" % domain)
+            
 def do_work():
     while True:
         ip = q.get()
-        g = GoHandler((ip, 443), timeout=6, domain_filter=None, result_queue=result)
+        g = GoHandler((ip, 443), timeout=6, domain_filter="android.com", result_queue=result)
         try:
             g.do()
         except:
@@ -102,12 +112,13 @@ def do_result():
         if r:
             with open('avalable_googleip.txt','a') as f:
                 f.writelines("%s  %s\n" % r)
-        
 
-if __name__ == '__main__':
+def main():
     with open('avalable_googleip.txt','a') as f:
         f.writelines('============%s=================\n' % time.strftime(DATE_FORMAT,time.localtime()))
+    global q
     q = Queue(50)
+    global result
     result = Queue(10)
     for i in range(10):
         t = Thread(target=do_work)
@@ -123,6 +134,14 @@ if __name__ == '__main__':
         q.join()
     except KeyboardInterrupt:
         sys.exit(1)
+
+
+def test():
+    h = GoHandler(("foxmail.com",443), 6, "qq.com")
+    h.do()
+
+if __name__ == '__main__':
+    main()
 
 
 
