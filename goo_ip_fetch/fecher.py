@@ -9,6 +9,7 @@ import random
 import ssl
 import socket
 import time
+import re
 from queue import Queue
 from threading import Thread
 
@@ -52,7 +53,7 @@ class Fecher:
 class GoHandler:
     def __init__(self, address, timeout=None, domain_filter=None, result_queue=None):
         """
-        @param domain_filter: if set,example:youtube.com, will only return the ip which 
+        @param domain_filter: if set,example:r"^wwwgoogle.com$|^play.google.com$", will only return the ip which 
         cert's DNS field matchs it, this may helpful if the IP is add to a hosts file,
         the browser will not warn cert err.
         """
@@ -75,9 +76,10 @@ class GoHandler:
             cert = ssl_sock.getpeercert(binary_form=False)
             ssl_sock.close()
             end_time = time.time()
-            if self.domain_filter != None:
-                self._check_name(cert, self.domain_filter)
             time_cost = '{:.6f}'.format(end_time - start_time)
+            if self.domain_filter != None:
+                time_cost += " filter:"
+                time_cost += self._check_name(cert, self.domain_filter)
             print("{1}:connect to {0} Success!!".format(self.address[0], time_cost))
             if self.result_queue:
                 self.result_queue.put((self.address[0], time_cost))
@@ -91,16 +93,15 @@ class GoHandler:
             print("{2}:connect to {1} timeout err: timeout in {0} seconds"
                   .format(self.timeout, self.address[0], time.strftime(DATE_FORMAT,time.localtime())))
             
-    def _check_name(self, cert, domain):
+    def _check_name(self, cert, pattern):
         subject_altname = cert.get('subjectAltName',{})
-        domains = ";".join([i[1] for i in subject_altname if i[0] == "DNS"])
-        if domain not in domains:
-            raise ssl.CertificateError("not match domain %s" % domain)
+        domains = [i[1] for i in subject_altname if (i[0] == "DNS" and pattern.search(i[1]) != None)]
+        return ";".join(domains)
             
-def do_work():
+def do_work(domain_filter=None):
     while True:
         ip = q.get()
-        g = GoHandler((ip, 443), timeout=6, domain_filter=None, result_queue=result)
+        g = GoHandler((ip, 443), timeout=6, domain_filter=domain_filter, result_queue=result)
         try:
             g.do()
         except:
@@ -121,7 +122,10 @@ def main():
     global result
     result = Queue(10)
     for i in range(10):
-        t = Thread(target=do_work)
+        #re.compile() or None
+        #example r"^www\.google\.com$|^play\.google\.com$
+        #example r"google.com"
+        t = Thread(target=do_work,kwargs= {'domain_filter':re.compile(r"play\.google\.com")}) 
         t.daemon = True
         t.start()
     file_writer = Thread(target=do_result)

@@ -1,3 +1,36 @@
 
 ============2014/11/18 17:24:20=================
 ============2014/11/18 17:32:57=================
+============2014/12/31 03:53:19=================
+173.194.137.121  0.982802
+74.125.3.170  1.561003
+173.194.58.41  1.139802
+173.194.68.147  1.201203
+74.125.96.114  0.296400
+74.125.3.144  0.748801
+173.194.149.228  1.138802
+208.117.224.180  1.124202
+============2015/01/09 04:11:37=================
+74.125.3.247  0.873601
+============2015/01/20 06:12:41=================
+============2015/01/20 06:13:21=================
+============2015/01/20 06:15:31=================
+173.194.149.138  1.141065
+173.194.18.181  1.199068
+============2015/01/20 06:18:18=================
+173.194.131.180  0.856049
+74.125.160.107  1.169067
+130.211.80.233  1.034059
+============2015/01/20 06:19:44=================
+208.117.233.82  0.782045
+173.194.17.214  0.794046*.c.docs.google.com;*.c.pack.google.com;*.c.play.google.com;*.c.video.google.com;*.cache1.c.docs.google.com;*.cache1.c.play.google.com;*.cache1.c.video.google.com;*.cache2.c.docs.google.com;*.cache2.c.play.google.com;*.cache2.c.video.google.com;*.cache3.c.docs.google.com;*.cache3.c.play.google.com;*.cache3.c.video.google.com;*.cache4.c.docs.google.com;*.cache4.c.play.google.com;*.cache4.c.video.google.com;*.cache5.c.docs.google.com;*.cache5.c.play.google.com;*.cache5.c.video.google.com;*.cache6.c.docs.google.com;*.cache6.c.play.google.com;*.cache6.c.video.google.com;*.cache7.c.docs.google.com;*.cache7.c.play.google.com;*.cache7.c.video.google.com;*.cache8.c.docs.google.com;*.cache8.c.play.google.com;*.cache8.c.video.google.com
+146.148.31.65  1.025059
+209.85.228.166  0.652038*.c.docs.google.com;*.c.pack.google.com;*.c.play.google.com;*.c.video.google.com;*.cache1.c.docs.google.com;*.cache1.c.play.google.com;*.cache1.c.video.google.com;*.cache2.c.docs.google.com;*.cache2.c.play.google.com;*.cache2.c.video.google.com;*.cache3.c.docs.google.com;*.cache3.c.play.google.com;*.cache3.c.video.google.com;*.cache4.c.docs.google.com;*.cache4.c.play.google.com;*.cache4.c.video.google.com;*.cache5.c.docs.google.com;*.cache5.c.play.google.com;*.cache5.c.video.google.com;*.cache6.c.docs.google.com;*.cache6.c.play.google.com;*.cache6.c.video.google.com;*.cache7.c.docs.google.com;*.cache7.c.play.google.com;*.cache7.c.video.google.com;*.cache8.c.docs.google.com;*.cache8.c.play.google.com;*.cache8.c.video.google.com
+208.117.233.59  0.729042google.com;*.appengine.google.com;*.cloud.google.com;*.google.com;*.google.com.af;*.google.com.ag;*.google.com.ai;*.google.com.ar;*.google.com.au;*.google.com.bd;*.google.com.bh;*.google.com.bn;*.google.com.bo;*.google.com.br;*.google.com.by;*.google.com.bz;*.google.com.cn;*.google.com.co;*.google.com.cu;*.google.com.cy;*.google.com.do;*.google.com.ec;*.google.com.eg;*.google.com.et;*.google.com.fj;*.google.com.ge;*.google.com.gh;*.google.com.gi;*.google.com.gr;*.google.com.gt;*.google.com.hk;*.google.com.iq;*.google.com.jm;*.google.com.jo;*.google.com.kh;*.google.com.kw;*.google.com.lb;*.google.com.ly;*.google.com.mm;*.google.com.mt;*.google.com.mx;*.google.com.my;*.google.com.na;*.google.com.nf;*.google.com.ng;*.google.com.ni;*.google.com.np;*.google.com.nr;*.google.com.om;*.google.com.pa;*.google.com.pe;*.google.com.pg;*.google.com.ph;*.google.com.pk;*.google.com.pl;*.google.com.pr;*.google.com.py;*.google.com.qa;*.google.com.ru;*.google.com.sa;*.google.com.sb;*.google.com.sg;*.google.com.sl;*.google.com.sv;*.google.com.tj;*.google.com.tn;*.google.com.tr;*.google.com.tw;*.google.com.ua;*.google.com.uy;*.google.com.vc;*.google.com.ve;*.google.com.vn;*.url.google.com;google.com.af;google.com.ag;google.com.ai;google.com.ar;google.com.au;google.com.bd;google.com.bh;google.com.bn;google.com.bo;google.com.br;google.com.by;google.com.bz;google.com.cn;google.com.co;google.com.cu;google.com.cy;google.com.do;google.com.ec;google.com.eg;google.com.et;google.com.fj;google.com.ge;google.com.gh;google.com.gi;google.com.gr;google.com.gt;google.com.hk;google.com.iq;google.com.jm;google.com.jo;google.com.kh;google.com.kw;google.com.lb;google.com.ly;google.com.mm;google.com.mt;google.com.mx;google.com.my;google.com.na;google.com.nf;google.com.ng;google.com.ni;google.com.np;google.com.nr;google.com.om;google.com.pa;google.com.pe;google.com.pg;google.com.ph;google.com.pk;google.com.pl;google.com.pr;google.com.py;google.com.qa;google.com.ru;google.com.sa;google.com.sb;google.com.sg;google.com.sl;google.com.sv;google.com.tj;google.com.tn;google.com.tr;google.com.tw;google.com.ua;google.com.uy;google.com.vc;google.com.ve;google.com.vn
+============2015/01/20 06:25:48=================
+173.194.76.189  0.905052 filter:
+70.32.144.76  0.979056 filter:
+173.194.21.102  1.305075 filter:*.c.play.google.com;*.cache1.c.play.google.com;*.cache2.c.play.google.com;*.cache3.c.play.google.com;*.cache4.c.play.google.com;*.cache5.c.play.google.com;*.cache6.c.play.google.com;*.cache7.c.play.google.com;*.cache8.c.play.google.com
+193.92.133.52  1.217070 filter:
+173.194.138.112  1.248071 filter:*.c.play.google.com;*.cache1.c.play.google.com;*.cache2.c.play.google.com;*.cache3.c.play.google.com;*.cache4.c.play.google.com;*.cache5.c.play.google.com;*.cache6.c.play.google.com;*.cache7.c.play.google.com;*.cache8.c.play.google.com
+213.186.229.43  1.027059 filter:
